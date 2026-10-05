@@ -83,7 +83,7 @@ function scene() {
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
   const sceneObj = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
-  camera.position.set(0, 0.6, 8);
+  camera.position.set(0, 0.5, 10.2);
 
   const rig = new THREE.Group();
   sceneObj.add(rig);

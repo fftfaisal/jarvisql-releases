@@ -22,6 +22,13 @@
   <a href="https://jarvisql.faisal.com.bd">Website</a>
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/app-dark.webp">
+    <img src="docs/assets/app-light.webp" width="860" alt="JarvisQL showing a table with filters, a row editor and the query log">
+  </picture>
+</p>
+
 ---
 
 ## Why JarvisQL
