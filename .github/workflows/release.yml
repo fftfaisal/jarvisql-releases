@@ -44,6 +44,16 @@ jobs:
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Remove a leftover draft from a failed run
+        if: steps.read.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/releases" --paginate             --jq ".[] | select(.draft and .tag_name == \"v${{ steps.read.outputs.version }}\") | .id" |
+          while read -r id; do
+            gh api -X DELETE "repos/$GITHUB_REPOSITORY/releases/$id"
+          done
+
   build:
     needs: prepare
     if: needs.prepare.outputs.publish == 'true'
@@ -101,6 +111,19 @@ jobs:
           tagName: v__VERSION__
           releaseName: JarvisQL v__VERSION__
           releaseBody: Installers for Windows, macOS and Linux. JarvisQL updates itself from Help, Check for updates.
-          releaseDraft: false
+          releaseDraft: true
           prerelease: false
           args: ${{ matrix.target && format('--target {0}', matrix.target) || '' }}
+
+  publish:
+    needs: [prepare, build]
+    if: needs.prepare.outputs.publish == 'true' && needs.build.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          id=$(gh api "repos/$GITHUB_REPOSITORY/releases" --paginate --jq ".[] | select(.draft and .tag_name == \"v${{ needs.prepare.outputs.version }}\") | .id" | head -n 1)
+          test -n "$id"
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F draft=false
