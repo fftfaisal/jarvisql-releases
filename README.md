@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="assets/logo.png" width="112" alt="JarvisQL logo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png">
+    <img src="assets/logo-light.png" width="340" alt="JarvisQL">
+  </picture>
 </p>
-
-<h1 align="center">JarvisQL</h1>
 
 <p align="center">
   A fast, modern desktop client for SQLite, MySQL, PostgreSQL and more.<br>
