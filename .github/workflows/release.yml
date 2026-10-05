@@ -102,6 +102,27 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - name: Get the release notes
+        uses: actions/checkout@v4
+        with:
+          path: notes
+          sparse-checkout: RELEASE_NOTES.md
+          sparse-checkout-cone-mode: false
+
+      - name: Read the release notes
+        id: notes
+        shell: bash
+        run: |
+          {
+            echo "body<<NOTES_EOF"
+            if [ -f notes/RELEASE_NOTES.md ]; then
+              cat notes/RELEASE_NOTES.md
+            else
+              echo "Installers for Windows, macOS and Linux. JarvisQL updates itself from Help, Check for updates."
+            fi
+            echo "NOTES_EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -110,7 +131,7 @@ jobs:
         with:
           tagName: v__VERSION__
           releaseName: JarvisQL v__VERSION__
-          releaseBody: Installers for Windows, macOS and Linux. JarvisQL updates itself from Help, Check for updates.
+          releaseBody: ${{ steps.notes.outputs.body }}
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.target && format('--target {0}', matrix.target) || '' }}
