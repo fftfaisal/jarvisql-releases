@@ -5,7 +5,7 @@
 <h1 align="center">JarvisQL</h1>
 
 <p align="center">
-  A fast, modern desktop client for SQLite.<br>
+  A fast, modern desktop client for SQLite, MySQL, PostgreSQL and more.<br>
   Open local files, or databases on remote servers over SSH.
 </p>
 
