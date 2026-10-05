@@ -25,7 +25,7 @@
 
 ## Why JarvisQL
 
-- **Small and quick.** The installer is under 4 MB.
+- **Small and quick.** The installer is about 5 MB.
 - **Local and remote.** Open a file on your computer, or one on a server over SSH with a password or a private key.
 - **Careful with your data.** Edits are collected first, so you can review every change before it is saved.
 - **Private.** No account and no analytics. Passwords are kept in your system keychain, never in a file.
@@ -36,12 +36,16 @@
 - Saved connections with groups, colors, and tags. Drag to reorder.
 - SQLite files on your computer.
 - SQLite files on a server over SSH, with host key checking.
+- MySQL servers, with SSL (including CA, client certificate and key files) and connections through an SSH tunnel.
+- A database picker: every database on a server opens as its own connection. Create or drop databases from it.
 - Passwords and key passphrases stored in Windows Credential Manager, macOS Keychain, or the Linux Secret Service.
 
 **Browse and edit**
 - Tables and views with sorting, filters, and paging. Choose how many rows to show, and start at any row.
 - Show or hide columns.
 - Edit cells in place, add, duplicate, or delete rows, then review all pending changes before you save.
+- Rows are matched by primary key, big numbers stay exact, and binary cells show a hex preview.
+- Clone or truncate a table from its right-click menu.
 - Structure, index, trigger, and DDL views. Change a table's structure with a preview of the SQL before it runs.
 
 **SQL editor**
@@ -53,6 +57,7 @@
 **Import and export**
 - Import CSV, JSON, and SQL files.
 - Export tables or whole databases as CSV, JSON, or SQL.
+- Big files are streamed, with progress and a Cancel button.
 
 **And more**
 - Light, dark, and system themes, with font settings.
