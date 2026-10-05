@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JarvisQL – a fast desktop client for your databases</title>
+  <meta name="description" content="JarvisQL is a fast, small desktop client for SQLite and MySQL. Local files or servers over SSH. No account, no analytics.">
+  <meta property="og:title" content="JarvisQL">
+  <meta property="og:description" content="A fast desktop client for your databases.">
+  <meta property="og:image" content="assets/icon.png">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="JarvisQL" height="34"></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#databases">Databases</a>
+      <a href="#download">Download</a>
+      <a href="https://github.com/fftfaisal/jarvisql-releases" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <a class="btn btn-small" href="#download">Download</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="pill reveal"><span class="dot"></span> <span id="hero-version">Latest release</span></p>
+        <h1 class="reveal">A fast desktop client<br>for <span class="grad">your databases</span></h1>
+        <p class="lead reveal">SQLite and MySQL, on your computer or on a server over SSH. A small installer, no account and no analytics.</p>
+        <div class="cta reveal">
+          <a class="btn btn-big" id="hero-download" href="https://github.com/fftfaisal/jarvisql-releases/releases/latest">Download</a>
+          <a class="btn btn-ghost btn-big" href="#download">All downloads</a>
+        </div>
+        <p class="fine reveal" id="hero-note">Windows, macOS and Linux</p>
+      </div>
+      <div class="hero-art" id="art" aria-hidden="true">
+        <canvas id="scene"></canvas>
+      </div>
+    </section>
+
+    <section class="showcase reveal" aria-label="The app">
+      <div class="window">
+        <div class="titlebar">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="tab on">orders</span><span class="tab">customers</span><span class="tab">SQL 1</span>
+          <span class="spacer"></span>
+          <span class="chip-db">shop</span>
+        </div>
+        <div class="body">
+          <aside>
+            <div class="search">Search tables</div>
+            <div class="item">customers</div>
+            <div class="item sel">orders</div>
+            <div class="item">order_items</div>
+            <div class="item">products</div>
+            <div class="item">reviews</div>
+            <div class="item view">top_buyers</div>
+          </aside>
+          <div class="grid">
+            <div class="row head"><span>id</span><span>customer</span><span>status</span><span>total</span><span>created</span></div>
+            <div class="row"><span>1041</span><span>Amira Khan</span><span>paid</span><span>120.00</span><span>2026-09-28 10:41</span></div>
+            <div class="row"><span>1042</span><span>Lucas Meyer</span><span class="edited">shipped</span><span>86.50</span><span>2026-09-28 11:02</span></div>
+            <div class="row"><span>1043</span><span>Noor Rahman</span><span>paid</span><span class="edited">240.00</span><span>2026-09-29 08:15</span></div>
+            <div class="row"><span>1044</span><span>Sofia Rossi</span><span>pending</span><span>19.99</span><span>2026-09-29 09:30</span></div>
+            <div class="row"><span>1045</span><span>Kenji Sato</span><span>paid</span><span>312.40</span><span>2026-09-30 14:12</span></div>
+            <div class="row"><span>1046</span><span>Hana Ali</span><span>refunded</span><span>54.00</span><span>2026-10-01 16:48</span></div>
+            <div class="pending-bar"><span class="amber"></span> 2 pending changes <b>Review</b></div>
+          </div>
+        </div>
+        <div class="status"><span>12 ms</span><span>MySQL 8.4.2 : SSH : TLSv1.3 : shop</span><span>↓ 1.2 MB ↑ 64 KB</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2 class="reveal">Everything you need, nothing you don't</h2>
+      <p class="sub reveal">Built for the daily work: browse, edit, query, import, export.</p>
+      <div class="cards">
+        <article class="card reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Zm0 0v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+          <h3>Local and remote</h3>
+          <p>Open a file on your computer, a MySQL server, or a database on a server over SSH. Tunnels and host key checks included.</p>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>
+          <h3>Review before you save</h3>
+          <p>Edits are collected first. See every change as SQL, then commit or discard them all at once.</p>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 19h14"/></svg>
+          <h3>Big files, no stress</h3>
+          <p>Imports and exports stream in chunks, show progress and can be cancelled. CSV, JSON and SQL.</p>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 5l-4 14"/></svg>
+          <h3>A proper SQL editor</h3>
+          <p>Autocomplete for tables and columns, query tabs, saved queries, history and a log with timings.</p>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11V8a6 6 0 1 1 12 0v3M5 11h14v9H5z"/></svg>
+          <h3>Private by design</h3>
+          <p>No account, no analytics. Passwords live in your system keychain, never in a file.</p>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5"/></svg>
+          <h3>Updates inside the app</h3>
+          <p>New versions are found and installed for you. The installer is only about 5 MB.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="databases">
+      <h2 class="reveal">One app, many databases</h2>
+      <p class="sub reveal">More are on the way.</p>
+      <div class="dbs">
+        <div class="db reveal"><span style="--c:#0ea5e9">SQ</span> SQLite</div>
+        <div class="db reveal"><span style="--c:#8b5cf6">SS</span> SQLite over SSH</div>
+        <div class="db reveal"><span style="--c:#f29111">My</span> MySQL</div>
+        <div class="db soon reveal"><span style="--c:#dc2626">Ms</span> SQL Server <em>soon</em></div>
+        <div class="db soon reveal"><span style="--c:#336791">Pg</span> PostgreSQL <em>soon</em></div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <h2 class="reveal">Get JarvisQL</h2>
+      <p class="sub reveal" id="dl-sub">Free to download.</p>
+      <div class="downloads">
+        <a class="dl reveal" data-os="windows" href="https://github.com/fftfaisal/jarvisql-releases/releases/latest"><b>Windows</b><span>.exe installer</span></a>
+        <a class="dl reveal" data-os="mac-arm" href="https://github.com/fftfaisal/jarvisql-releases/releases/latest"><b>macOS</b><span>Apple silicon</span></a>
+        <a class="dl reveal" data-os="mac-intel" href="https://github.com/fftfaisal/jarvisql-releases/releases/latest"><b>macOS</b><span>Intel</span></a>
+        <a class="dl reveal" data-os="linux" href="https://github.com/fftfaisal/jarvisql-releases/releases/latest"><b>Linux</b><span>AppImage or .deb</span></a>
+      </div>
+      <p class="note reveal">The installers are not code-signed yet, so your system may ask you to confirm the first launch. On Windows click <b>More info</b>, then <b>Run anyway</b>. On macOS right-click the app, choose <b>Open</b>, then <b>Open</b> again.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Made by <a href="https://faisal.com.bd" target="_blank" rel="noopener">Faisal Ahmed</a></span>
+    <span>
+      <a href="https://github.com/fftfaisal/jarvisql-releases/issues/new" target="_blank" rel="noopener">Report an issue</a>
+      · <a href="https://github.com/fftfaisal/jarvisql-releases/releases" target="_blank" rel="noopener">Releases</a>
+    </span>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
