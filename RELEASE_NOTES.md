@@ -1,7 +1,6 @@
-What's new in 0.2.0
-- MySQL: SSL with CA, client cert and key files, and connections through an SSH tunnel.
-- Databases: pick a database on a server and open it as its own connection. Create or drop databases.
-- Tables: clone and truncate, with a foreign key checks option for truncate and drop.
-- Import and export: big files stream, with progress and a Cancel button.
-- Safer editing: rows are matched by primary key, big numbers stay exact, binary cells show a hex preview.
-- Nicer app: the status bar shows the server, SSH and TLS version, loading indicators, a scrollable connection dialog.
+What's new in 0.2.1
+- Windows: the installer now upgrades over an older version, with no uninstall step first.
+- Updates: the in-app updater works again, and the dialog highlights the new version.
+- MySQL: the connection reconnects on its own and the status bar shows when the server is disconnected.
+- Structure: the tab refreshes after changes made in another client or after a reconnect, and you can move the primary key off an auto-increment column.
+- Safer reload: you are asked before a reload or reconnect throws away unsaved changes.
