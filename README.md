@@ -76,10 +76,10 @@
 
 | System | Download |
 | --- | --- |
-| Windows | `JarvisQL_x.y.z_x64-setup.exe` |
-| macOS, Apple silicon | `JarvisQL_x.y.z_aarch64.dmg` |
-| macOS, Intel | `JarvisQL_x.y.z_x64.dmg` |
-| Linux | `JarvisQL_x.y.z_amd64.AppImage` or `.deb` |
+| Windows | `JarvisQL-x.y.z-windows-x64-setup.exe` |
+| macOS, Apple silicon | `JarvisQL-x.y.z-macos-aarch64.dmg` |
+| macOS, Intel | `JarvisQL-x.y.z-macos-x64.dmg` |
+| Linux | `JarvisQL-x.y.z-linux-amd64.AppImage` or `.deb` |
 
 Get the latest files from the [releases page](https://github.com/fftfaisal/jarvisql-releases/releases/latest).
 

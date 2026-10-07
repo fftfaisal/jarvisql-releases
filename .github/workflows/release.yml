@@ -132,6 +132,7 @@ jobs:
           tagName: v__VERSION__
           releaseName: JarvisQL v__VERSION__
           releaseBody: ${{ steps.notes.outputs.body }}
+          releaseAssetNamePattern: "[name]-[version]-[platform]-[arch][setup][ext]"
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.target && format('--target {0}', matrix.target) || '' }}
