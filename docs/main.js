@@ -37,7 +37,8 @@ const PICK = {
   windows: (n) => /setup\.exe$/i.test(n),
   "mac-arm": (n) => /aarch64\.dmg$/i.test(n),
   "mac-intel": (n) => /x64\.dmg$/i.test(n),
-  linux: (n) => /\.AppImage$/i.test(n),
+  linux: (n) => /\.deb$/i.test(n),
+  "linux-appimage": (n) => /\.AppImage$/i.test(n),
 };
 const NAMES = { windows: "Windows", "mac-arm": "macOS", "mac-intel": "macOS", linux: "Linux" };
 
