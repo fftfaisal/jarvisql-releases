@@ -108,10 +108,34 @@ Get the latest files from the [releases page](https://github.com/fftfaisal/jarvi
 The installers are not code-signed yet, so your system may ask you to confirm the first launch:
 
 - **Windows:** if SmartScreen says "Windows protected your PC", click **More info**, then **Run anyway**.
-- **macOS:** right-click the app, choose **Open**, then **Open** again.
+- **macOS:** see [Opening JarvisQL on macOS](#opening-jarvisql-on-macos) below.
 - **Linux:** for the AppImage, make it executable first with `chmod +x`.
 
 JarvisQL checks for new versions and installs them for you. You can also check at any time from **Help**, then **Check for updates**.
+
+### Opening JarvisQL on macOS
+
+JarvisQL is not notarized by Apple, so macOS blocks the first launch with a message like **"JarvisQL" Not Opened**, **Apple could not verify "JarvisQL" is free of malware** or **"JarvisQL" is damaged and can't be opened**. The app is not damaged. Click **Done** or **Cancel**, never **Move to Trash**, then use one of the ways below. You only need to do this once.
+
+**Option 1: System Settings**
+
+1. Open the DMG and drag **JarvisQL** into **Applications**.
+2. Open JarvisQL once and close the warning.
+3. Open **System Settings**, then **Privacy & Security**.
+4. Scroll down to the message about JarvisQL and click **Open Anyway**.
+5. Click **Open Anyway** again and enter your Mac password.
+
+**Option 2: Terminal**
+
+If you see "is damaged", or Option 1 shows no **Open Anyway** button, open **Terminal** and run:
+
+```bash
+xattr -cr /Applications/JarvisQL.app
+```
+
+Then open JarvisQL as usual. If macOS says permission denied, run `sudo xattr -cr /Applications/JarvisQL.app` and enter your Mac password.
+
+This only removes the "downloaded from the internet" flag from JarvisQL. It does not change any other security setting. Updates installed from inside the app keep working without these steps.
 
 ### Usage
 
