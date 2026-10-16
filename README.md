@@ -8,7 +8,7 @@
 <h3 align="center">A fast, private desktop client for your databases.</h3>
 
 <p align="center">
-  SQLite, MySQL and MariaDB, on your computer or on a server over SSH.
+  SQLite, MySQL, MariaDB and PostgreSQL, on your computer or on a server over SSH.
 </p>
 
 <p align="center">
@@ -51,16 +51,19 @@
 | SQLite | Yes | Yes | n/a | Yes |
 | MySQL | Yes | Yes | Yes | Yes |
 | MariaDB | Yes | Yes | Yes | Yes |
-| PostgreSQL | Planned | Planned | Planned | Planned |
+| PostgreSQL | Yes | Yes | Yes | Yes |
 | SQL Server | Planned | Planned | Planned | Planned |
+| LibSQL | Planned | Planned | Planned | Planned |
+| Turso | Planned | Planned | Planned | Planned |
 
 ### Features
 
 **Connections**
 - Saved connections with groups, colors, and tags. Drag to reorder.
 - SQLite files on your computer, or on a server over SSH.
-- MySQL and MariaDB servers, with SSL (including CA, client certificate and key files) and connections through an SSH tunnel.
+- MySQL, MariaDB and PostgreSQL servers, with SSL (including CA, client certificate and key files) and connections through an SSH tunnel.
 - A database picker: every database on a server opens as its own connection. Create or drop databases from it.
+- A schema picker for PostgreSQL. Create, rename, or drop schemas from it.
 - Passwords and key passphrases stored in Windows Credential Manager, macOS Keychain, or the Linux Secret Service.
 
 **Browse and edit**
@@ -73,6 +76,7 @@
 **Database users**
 - List, create, rename, and delete MySQL and MariaDB users.
 - Set passwords, host, resource limits, and access per database, from none to full.
+- PostgreSQL roles: log in, superuser, creating databases and roles, connecting to a database, and access per schema, from none to full.
 - Review the exact SQL before anything is applied.
 
 **SQL editor**
