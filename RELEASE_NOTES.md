@@ -6,4 +6,5 @@ What's new in 0.7.0
 - Filters: apply a single filter row with its own Apply button, or every ticked row with Apply all. Unset shows all rows again and keeps your filters, and the SQL button shows the query behind the rows on screen. New in and not in filters take a list of values separated by commas. Filter queries are now plain SQL for each database.
 - Shortcuts: Ctrl+K opens the database list and Ctrl+F opens the row filters.
 - PostgreSQL URLs: copy, import and open postgres:// and postgresql:// links, including +ssh ones.
+- Duplicate connections: choose Duplicate from a connection's menu to open a new connection filled in from it, saved passwords included. Change what you need and save.
 - Smaller things: a server connection without a database now asks you to pick one before showing tables or New table. The connection name in the SQL editor is easier to read in the light theme. The selected cell no longer stays on the same spot when you change page or filters.
