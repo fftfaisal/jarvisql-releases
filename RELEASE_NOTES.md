@@ -1,3 +1,7 @@
-What's new in 0.7.1
-- macOS: the app no longer shows "JarvisQL is damaged and can't be opened" after you download it. JarvisQL is not notarized by Apple, so the first time you open it macOS still asks you to confirm. Click Done, then open System Settings, Privacy & Security and click Open Anyway. You only need to do this once. Full steps: https://github.com/fftfaisal/jarvisql-releases#opening-jarvisql-on-macos
-- Already have 0.7.0 on macOS and it won't open? Run `xattr -cr /Applications/JarvisQL.app` in Terminal, then open JarvisQL.
+What's new in 0.8.0
+- LibSQL and Turso: connect to a Turso database or your own LibSQL server with its URL and auth token, or open a local LibSQL file. Browse, filter and edit rows, run SQL, change table structure, and import or export data, the same as with SQLite. The auth token is kept in your system keychain.
+- LibSQL links: copy, import and open libsql:// links, including ones with an authToken.
+- Select several tables: Ctrl+click tables in the list, Shift+click to select a range, or press Ctrl+A to select them all. Right-click to drop, truncate or export them together, or copy their names.
+- Copy SQL: the drop and truncate dialogs can copy the exact SQL that will run.
+- Export several tables: SQL goes into one file, and CSV or JSON into a file per table in a folder you choose.
+- Imports are faster on remote databases, because rows are sent in batches. If a row fails, the error now names the range of rows it was in.

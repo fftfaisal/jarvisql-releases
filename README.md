@@ -8,7 +8,7 @@
 <h3 align="center">A fast, private desktop client for your databases.</h3>
 
 <p align="center">
-  SQLite, MySQL, MariaDB and PostgreSQL, on your computer or on a server over SSH.
+  SQLite, LibSQL and Turso, MySQL, MariaDB and PostgreSQL, on your computer or on a server over SSH.
 </p>
 
 <p align="center">
@@ -53,14 +53,16 @@
 | MariaDB | Yes | Yes | Yes | Yes |
 | PostgreSQL | Yes | Yes | Yes | Yes |
 | SQL Server | Planned | Planned | Planned | Planned |
-| LibSQL | Planned | Planned | Planned | Planned |
-| Turso | Planned | Planned | Planned | Planned |
+| Redis | Planned | Planned | Planned | Planned |
+| LibSQL | Yes | Yes | n/a | No |
+| Turso | Yes | Yes | n/a | No |
 
 ### Features
 
 **Connections**
 - Saved connections with groups, colors, and tags. Drag to reorder.
 - SQLite files on your computer, or on a server over SSH.
+- Turso databases and LibSQL servers with a URL and auth token, or local LibSQL files.
 - MySQL, MariaDB and PostgreSQL servers, with SSL (including CA, client certificate and key files) and connections through an SSH tunnel.
 - A database picker: every database on a server opens as its own connection. Create or drop databases from it.
 - A schema picker for PostgreSQL. Create, rename, or drop schemas from it.
@@ -68,6 +70,7 @@
 
 **Browse and edit**
 - Tables and views with sorting, filters, and paging. Choose how many rows to show, and start at any row.
+- Select several tables to drop, truncate, or export them together, with the exact SQL to copy before it runs.
 - Edit cells in place, add, duplicate, or delete rows, then review all pending changes before you save.
 - Set a field to `NOW()`, the current date or time, or `DEFAULT` from the row editor.
 - Rows are matched by primary key, big numbers stay exact, and binary cells show a hex preview.
@@ -87,7 +90,7 @@
 
 **Import and export**
 - Import CSV, JSON, and SQL files.
-- Export tables or whole databases as CSV, JSON, or SQL.
+- Export tables, several tables at once, or whole databases as CSV, JSON, or SQL.
 
 **And more**
 - Light, dark, and system themes, with font settings.
