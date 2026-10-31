@@ -1,12 +1,8 @@
-What's new in 0.9.0
-- Edit several rows at once: select rows and change a field in the row editor to set it on all of them. Fields where the rows differ show "Multiple values".
-- Search tables: press Ctrl+P to find and open any table or view by name.
-- New shortcuts: Ctrl+O opens a connection, Ctrl+W closes the tab, and Ctrl+Shift+W closes the connection.
-- A cleaner window: JarvisQL now draws its own title bar, with the window buttons in the top bar. The app icon has a transparent background.
-- SSH connections stay open: tunnels no longer close after two minutes idle, and keepalives stop servers from dropping them.
-- Foreign keys open faster: clicking a foreign key now loads only the matching rows.
-- Several databases on one server: each one shows its own initials in the left rail, and hovering shows the connection and database name.
-- Counts: the table list shows how many tables there are, and the database list how many databases.
-- The database list loads once and refreshes after you create or drop a database, or press Refresh.
-- The connection test result now shows next to the buttons, so you see it without scrolling.
-- Clearer Turso errors when the auth token is rejected or the URL is wrong.
+What's new in 0.10.0
+- Redis: connect to a Redis server, with a password, TLS, or through an SSH tunnel. Each database (db0, db1 and so on) shows as a table and its keys as rows.
+- Edit Redis keys in the row editor: change a value or its time to live, add, rename and delete keys. Hashes, lists, sets and sorted sets are edited as JSON. Clear the time to live to make a key never expire.
+- Redis links: open redis:// and rediss:// links, and import them from a URL.
+- Big Redis values no longer freeze the app. Large values are cut in the grid, and a cut value can't be saved by mistake.
+- A better grid: columns fit their contents, a tinted header, striped rows, and no empty column when a table has few columns. Column widths you set are remembered for each table.
+- The tab bar scrolls to the tab you open, so you always see which one is active.
+- On Linux, JarvisQL now uses the Ubuntu font by default. It is also in the font list in Settings.

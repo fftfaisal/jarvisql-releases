@@ -53,7 +53,7 @@
 | MariaDB | Yes | Yes | Yes | Yes |
 | PostgreSQL | Yes | Yes | Yes | Yes |
 | SQL Server | Planned | Planned | Planned | Planned |
-| Redis | Planned | Planned | Planned | Planned |
+| Redis | Yes | n/a | n/a | Yes |
 | LibSQL | Yes | Yes | n/a | No |
 | Turso | Yes | Yes | n/a | No |
 
