@@ -1,7 +1,12 @@
-What's new in 0.8.0
-- LibSQL and Turso: connect to a Turso database or your own LibSQL server with its URL and auth token, or open a local LibSQL file. Browse, filter and edit rows, run SQL, change table structure, and import or export data, the same as with SQLite. The auth token is kept in your system keychain.
-- LibSQL links: copy, import and open libsql:// links, including ones with an authToken.
-- Select several tables: Ctrl+click tables in the list, Shift+click to select a range, or press Ctrl+A to select them all. Right-click to drop, truncate or export them together, or copy their names.
-- Copy SQL: the drop and truncate dialogs can copy the exact SQL that will run.
-- Export several tables: SQL goes into one file, and CSV or JSON into a file per table in a folder you choose.
-- Imports are faster on remote databases, because rows are sent in batches. If a row fails, the error now names the range of rows it was in.
+What's new in 0.9.0
+- Edit several rows at once: select rows and change a field in the row editor to set it on all of them. Fields where the rows differ show "Multiple values".
+- Search tables: press Ctrl+P to find and open any table or view by name.
+- New shortcuts: Ctrl+O opens a connection, Ctrl+W closes the tab, and Ctrl+Shift+W closes the connection.
+- A cleaner window: JarvisQL now draws its own title bar, with the window buttons in the top bar. The app icon has a transparent background.
+- SSH connections stay open: tunnels no longer close after two minutes idle, and keepalives stop servers from dropping them.
+- Foreign keys open faster: clicking a foreign key now loads only the matching rows.
+- Several databases on one server: each one shows its own initials in the left rail, and hovering shows the connection and database name.
+- Counts: the table list shows how many tables there are, and the database list how many databases.
+- The database list loads once and refreshes after you create or drop a database, or press Refresh.
+- The connection test result now shows next to the buttons, so you see it without scrolling.
+- Clearer Turso errors when the auth token is rejected or the URL is wrong.
