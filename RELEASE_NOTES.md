@@ -1,7 +1,14 @@
-What's new in 0.11.0
-- Fixed: tables with long text or JSON values no longer load forever or freeze the app, on MySQL, PostgreSQL and SQLite, local or over SSH. Long values show their first 1000 characters in the grid, and pages load much faster.
-- Click to edit: a long value that is cut shows a Click to edit button in the row editor. Click it to load the whole value and edit it. Saving writes the whole value.
-- Copy, Copy as and Duplicate use the whole value, not the cut one.
-- Duplicate and Add row scroll the grid to the new row.
-- Click a cell in the grid and the row editor marks that column and scrolls to it.
-- On macOS, the scrollbars in the grid and the row editor always show.
+What's new in 0.12.0
+- Faster SQL imports on MySQL and PostgreSQL: Fast import sends many statements at once and commits in batches. It's on by default in the import dialog and can be turned off.
+- Large SQLite scripts import in pieces, show progress and can be cancelled, instead of loading the whole file into memory.
+- Faster exports on MySQL and PostgreSQL: Use several connections writes up to 4 tables at the same time. It's on by default.
+- Import and export progress shows MB or GB, the percent done and the time left.
+- MySQL connections over SSH are compressed.
+- Export: choose Structure and Data for each table, or for all at once from the column header. Entire database shows the same table list.
+- Export shows each table's rows and size and the total of what's selected. Click Name, Rows or Size to sort.
+- Export SQL as one file or one file per table.
+- Export opens with SQL selected.
+- Drop and truncate show progress while they run, with Stop for several tables. If some tables fail, the dialog lists each one with its error.
+- Fixed: Ctrl+click and Shift+click can pick several tables when no table is open.
+- Fixed: when the open database is dropped, the database picker still opens, and Reconnect says the database no longer exists.
+- Fixed: exporting a PostgreSQL database with views failed.
